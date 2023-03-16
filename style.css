@@ -9,7 +9,7 @@
 
 :root{
   --page-width: 8.5in;
-  --page-height: 11in;
+  /* --page-height: 11in; */
   --main-width: 6.4in;
   --sidebar-width: calc(var(--page-width) - var(--main-width));
   --decorator-horizontal-margin: 0.2in;
@@ -33,11 +33,15 @@ body{
   width: var(--page-width);
   height: var(--page-height);
   margin: 0;
-  font-family: "Open Sans", sans-serif; 
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
   line-height: 1.3;
   color: #444;
   hyphens: auto;
+}
+
+h1{
+  font-size: 55pt;
 }
 
 h1, h2, h3{
@@ -45,23 +49,39 @@ h1, h2, h3{
   color: #000;
 }
 
+h3{
+  font-size: 9pt;
+}
+
 li{
   list-style-type: none;
 }
 
+a, a:visited {
+  color: inherit;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(165, 74, 250);
+}
+
 #main{
-  float: left;
+  float: right;
   width: var(--main-width);
   padding: 0.25in 0.25in 0 0.25in;
   font-size: 7pt;
 }
 
 #sidebar{
-  float: right;
+  float: left;
   position: relative; /* for disclaimer */
   width: var(--sidebar-width);
   height: 100%;
-  padding: 0.6in var(--sidebar-horizontal-padding);
+  padding: 0.4in var(--sidebar-horizontal-padding);
   background-image: linear-gradient(to top, rgba(255,0,0,0), rgb(237, 174, 237,1));
   /* background-color: rgb(237, 174, 237); */
   font-size: 8.5pt;
@@ -72,19 +92,18 @@ li{
 /** big title **/
 #title{
   position: relative;
-  left: 0.55in;
-  margin-bottom: 0.3in;
+  left: 0;
+  margin-top: 0;
   line-height: 1.2;
 }
 
 #title h1{
+  margin-top: 0;
   font-weight: 300;
-  font-size: 18pt;
-  line-height: 1.5;
 }
 
 #title h1 strong{
-  margin: auto 2pt auto 4pt;
+  /* margin: auto 2pt auto 4pt; */
   font-weight: 600;
 }
 
@@ -102,7 +121,7 @@ li{
   position: relative;
   top: var(--row-blocks-padding-top);
   /* XXX: 0.5px for aligning fx printing */
-  left: calc((var(--date-block-width) + var(--decorator-horizontal-margin)));
+  /* left: calc((var(--date-block-width) + var(--decorator-horizontal-margin))); */
   font-weight: 400;
   font-size: 11pt;
   color: #555;
@@ -118,23 +137,14 @@ li{
   color: #444;
 }
 
-#main h2::after{ /* extends the decorator line */
-  height: calc(var(--row-blocks-padding-top) * 2);
-  position: relative;
-  top: calc(-1 * var(--row-blocks-padding-top));
-  /* XXX: 0.5px for aligning fx printing */
-  left: calc(-1 * var(--decorator-horizontal-margin));
-  display: block;
-  border-left: var(--decorator-border);
-  z-index: 0;
-  line-height: 0;
-  font-size: 0;
-  content: ' ';
+#main h2 {
+  left: 15pt;
+  margin-bottom: 10pt;
 }
 
 /**** minor tweaks on the icon fonts ****/
 #main h2 > .fa-graduation-cap{
-  left: calc(var(--main-blocks-title-icon-offset-left) - 2pt);
+  /* left: calc(var(--main-blocks-title-icon-offset-left) - 2pt); */
   top: 2pt;
 }
 
@@ -226,7 +236,7 @@ li{
 
 /***** fine-tunes on the details block where the real juice is *****/
 
-.details{
+#main .details{
   flex: 1 0 0;
   padding-left: var(--decorator-horizontal-margin);
   padding-top: calc(var(--row-blocks-padding-top) - 0.5pt) !important; /* not sure why but this is needed for better alignment */
@@ -236,13 +246,9 @@ li{
   color: #000;
 }
 
-.details h3{
-  font-size: 9pt;
-}
-
-.main-block:not(.concise) .details div{
+/* .main-block:not(.concise) .details div{
   margin: 0.18in 0 0.1in 0; 
-}
+} */
 
 .main-block:not(.concise) .blocks:last-child .details div{
   margin-bottom: 0;
@@ -254,14 +260,14 @@ li{
   padding: 0.05in 0 0.07in 0;
 }
 
-.details .place{
+/* .details .place{
   float: left;
   font-size: 7.5pt;
 }
 
 .details .location{
   float: right;
-}
+} */
 
 .details div{
   clear: both;
@@ -270,7 +276,8 @@ li{
 .details .location::before{
   display: inline-block;
   position: relative;
-  right: 3pt;
+  padding-right: 3pt;
+  left: 0;
   top: 0.25pt;
   font-family: FontAwesome;
   font-weight: normal;
@@ -297,6 +304,12 @@ li{
   content: '• ';
 }
 
+#publications li::before{
+  position: relative;
+  margin-left: -4.25pt;
+  content: none;
+}
+
 .details .concise ul{
   margin: 0 !important;
   -webkit-columns: 2;
@@ -318,24 +331,40 @@ li{
 
 #sidebar h1{
   font-weight: 400;
-  font-size: 11pt;
+  font-size: 22pt;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-.side-block{
-  margin-top: 0.5in; 
+hr {
+  height: 0.5px;
+  border-width: 0;
+  color: whitesmoke;
+  background-color: whitesmoke;
+  margin-top: 30pt;
+  margin-bottom: 30pt;
 }
 
 .side-block .fa{
-  padding-right: 0.152in; 
+  padding-right: 0.2in;
+  color: rgb(165, 74, 250);
 }
 
 
 #contact ul{
-  margin-top: 0.05in;
+  /* margin-top: 0.05in; */
   padding-left: 0;
-  font-family: "Source Code Pro";
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
-  line-height: 1.75;
+  line-height: 2;
+}
+
+#contact h2 {
+  font-weight: 400;
+  font-size: 11pt;
+  color: #555;
+  padding-top: 10pt;
+  padding-bottom: 10pt;
 }
 
 #contact li > i{
@@ -343,23 +372,41 @@ li{
   text-align: right;
 }
 
-#skills{
-  line-height: 1.5;
-}
-
-#skills ul{
+#education ul{
   margin: 0.05in 0 0.15in;
   padding: 0;
 }
 
+#skills{
+  line-height: 1.5;
+}
+
+.sublist {
+  position: relative;
+  left: 5pt;
+}
+
+#skills ul{
+  margin: 0 0 0.15in;
+  padding: 0;
+}
+
+/* #publications ul {
+  margin: 0.05in 0 0.15in;
+  padding: 0;
+  font-size:7pt;
+} */
+
 #disclaimer{
-  position: absolute;
+  /* position: absolute; */
+  padding-top: 20pt;
+  padding-bottom: 20pt;
   bottom: var(--sidebar-horizontal-padding);
-  right: var(--sidebar-horizontal-padding);
-  font-size: 7.5pt;
+  left: var(--sidebar-horizontal-padding);
+  font-size: 7pt;
   font-style: italic;
   line-height: 1.1;
-  text-align: right;
+  text-align: left;
   color: #777;
 }
 
