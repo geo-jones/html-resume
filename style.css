@@ -88,7 +88,7 @@ a:link {
   width: 25%;
   padding: 1.5em;
   /* padding: 0.4in var(--sidebar-horizontal-padding); */
-  background-image: linear-gradient(to bottom, rgb(37, 39, 77, 1), rgba(37, 39, 77, 0.669));
+  background-image: linear-gradient(to bottom, rgb(37, 39, 77, 1), rgba(37, 39, 77, 1));
   /* background-color: #25274d; */
   font-size: 8.5pt;
   color: #aaabb8;
