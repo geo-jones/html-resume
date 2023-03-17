@@ -1,10 +1,10 @@
 @page{
   size: letter portrait;
-  /* margin-left: 0;
-  margin-right: 0;
-  margin-top: 0.125in;
-  margin-bottom: 0.125in; */
-  margin: 0.25in;
+  margin-left: 0.25in;
+  margin-right: 0.25in;
+  margin-top: 0.5in;
+  margin-bottom: 0.5in;
+  /* margin: 0.5in; */
 }
 
 *{
@@ -171,7 +171,7 @@ a:link {
 }
 
 .main-block{
-  margin-top: 0.1in;
+  margin-top: 0.2in;
 }
 
 #main a:hover {
