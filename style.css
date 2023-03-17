@@ -50,9 +50,9 @@ body{
   overflow: scroll;
 }
 
-h1{
-  font-size: 55pt;
-}
+/* h1{
+  font-size: 100;
+} */
 
 h1, h2, h3{
   margin: 0;
@@ -96,7 +96,7 @@ a:link {
 
 #sidebar h1{
   font-weight: 400;
-  font-size: 20pt;
+  font-size: 21pt;
   /* margin-top: 10em; */
   margin-bottom: 0;
 }
