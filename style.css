@@ -19,7 +19,7 @@
 
   /* XXX: using px for very good precision control */
   --decorator-outer-offset-top: 1em;
-  --decorator-outer-offset-left: -.5em;
+  --decorator-outer-offset-left: -.6em;
   --decorator-border-width: 1px;
   --decorator-outer-dim: 9px;
   --decorator-border: 1px solid #ccc;
@@ -80,11 +80,11 @@ a:link {
   float: left;
   position: relative;
   /* width: var(--sidebar-width); */
-  width: 25%;
+  width: 22%;
   padding: 1.5em;
   /* padding: 0.4in var(--sidebar-horizontal-padding); */
-  background-image: linear-gradient(to top, rgb(37, 39, 77, 1), rgba(37, 39, 77, 0.4));
-  background-color: #1f1815;
+  background-image: linear-gradient(to top, rgb(37, 39, 77, 1), rgba(37, 39, 77, 1));
+  /* background-color: #1f1815; */
   font-size: 8.5pt;
   color: #aaabb8;
 }
@@ -97,7 +97,7 @@ a:link {
 }
 
 a:hover {
-  color: #49bf9d;
+  color: #05bc7c;
 }
 
 #sidebar h2 {
@@ -105,7 +105,7 @@ a:hover {
 }
 
 #sidebar h3 {
-  color: #49bf9d;
+  color: #05bc7c;
 }
 
 #sidebar h3 a:hover {
@@ -170,9 +170,9 @@ a:hover {
   float: right;
   /* width: var(--main-width); */
   position: relative;
-  width: 75%;
+  width: 78%;
   height: 100%;
-  padding: 0 10em 0 2em;
+  padding: 0 15% 0 2em;
   font-size: 7pt;
 }
 
@@ -420,5 +420,12 @@ hr {
   }
   a:link {
     border-bottom: none;
+  }
+  #main {
+    padding: 0 5% 0 2em;
+    width: 74%
+  }
+  #sidebar {
+    width: 26%;
   }
 }
