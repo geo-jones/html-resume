@@ -385,10 +385,10 @@ hr {
   margin-bottom: 3em;
 }
 
-/* .sublist {
+.sublist {
   position: relative;
   left: 5pt;
-} */
+}
 
 #skills ul{
   margin: 0.2em 0 1.5em;
