@@ -98,6 +98,8 @@ a:link {
 
 a:hover {
   color: #05bc7c;
+  border-bottom: none;
+
 }
 
 #sidebar h2 {
