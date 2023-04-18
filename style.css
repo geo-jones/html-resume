@@ -1,9 +1,9 @@
 @page{
   size: letter portrait;
-  margin-left: 0.25in;
-  margin-right: 0.25in;
-  margin-top: 0.25in;
-  margin-bottom: 0.25in;
+  margin-left: 0in;
+  margin-right: 0in;
+  margin-top: 0in;
+  margin-bottom: 0in;
   /* margin: 0.5in; */
 }
 
@@ -17,9 +17,8 @@
 
   --sidebar-horizontal-padding: 2em;
 
-  /* XXX: using px for very good precision control */
   --decorator-outer-offset-top: 1em;
-  --decorator-outer-offset-left: -.6em;
+  --decorator-outer-offset-left: -0.4em;
   --decorator-border-width: 1px;
   --decorator-outer-dim: 9px;
   --decorator-border: 1px solid #ccc;
@@ -44,6 +43,10 @@ body{
   overflow: scroll;
 }
 
+#page {
+  display: flex;
+}
+
 /* h1{
   font-size: 100;
 } */
@@ -54,7 +57,7 @@ h1, h2, h3{
 }
 
 h3{
-  font-size: 9pt;
+  font-size: 12pt;
 }
 
 li{
@@ -77,6 +80,7 @@ a:link {
 /* sidebar */
 
 #sidebar{
+  flex: 1;
   float: left;
   position: relative;
   /* width: var(--sidebar-width); */
@@ -85,13 +89,13 @@ a:link {
   /* padding: 0.4in var(--sidebar-horizontal-padding); */
   background-image: linear-gradient(to top, rgb(37, 39, 77, 1), rgba(37, 39, 77, 1));
   /* background-color: #1f1815; */
-  font-size: 8.5pt;
+  font-size: 10.5pt;
   color: #aaabb8;
 }
 
 #sidebar h1{
-  font-weight: 400;
-  font-size: 21pt;
+  font-weight: 500;
+  font-size: 30pt;
   /* margin-top: 10em; */
   margin-bottom: 0;
 }
@@ -128,7 +132,7 @@ a:hover {
 }
 
 .subtitle{
-  font-size: 8pt;
+  font-size: 10pt;
 }
 
 .side-block .fa{
@@ -138,7 +142,7 @@ a:hover {
 
 #contact h2 {
   font-weight: 400;
-  font-size: 11pt;
+  font-size: 14pt;
   color: #05bc7c;
   padding-top: 1em;
   padding-bottom: 1em;
@@ -169,13 +173,14 @@ a:hover {
 /*** categorial blocks ***/
 
 #main{
-  float: right;
+  flex: 2;
+  /* float: right; */
   /* width: var(--main-width); */
   position: relative;
   width: 78%;
   height: 100%;
   padding: 0 15% 0 2em;
-  font-size: 7pt;
+  font-size: 10pt;
 }
 
 .main-block{
@@ -192,7 +197,7 @@ a:hover {
   /* XXX: 0.5px for aligning fx printing */
   /* left: calc((var(--date-block-width) + var(--decorator-horizontal-margin))); */
   font-weight: 200;
-  font-size: 11pt;
+  font-size: 14pt;
   color: #25274d;
 }
 
@@ -245,7 +250,7 @@ a:hover {
   flex: 0 0 var(--date-block-width);
   padding-top: calc(var(--row-blocks-padding-top)) !important;
   padding-right: var(--decorator-horizontal-margin);
-  font-size: 7pt;
+  font-size: 10pt;
   text-align: right;
   line-height: 1;
 }
@@ -409,7 +414,7 @@ hr {
   padding-bottom: 0;
   bottom: var(--sidebar-horizontal-padding);
   left: var(--sidebar-horizontal-padding);
-  font-size: 6.5pt;
+  font-size: 8.5pt;
   font-style: italic;
   line-height: 1.1;
   text-align: left;
