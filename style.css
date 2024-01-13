@@ -369,6 +369,10 @@ a:hover {
   content: none;
 }
 
+#references li::before{
+  content: none;
+}
+
 .details .concise ul{
   margin: 0 !important;
   -webkit-columns: 2;
