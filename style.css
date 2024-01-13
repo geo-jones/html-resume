@@ -1,4 +1,4 @@
-@page{
+@page {
   size: letter portrait;
   margin-left: 0in;
   margin-right: 0in;
@@ -7,11 +7,11 @@
   /* margin: 0.5in; */
 }
 
-*{
+* {
   box-sizing: border-box;
 }
 
-:root{
+:root {
   /* --page-height: 11in; */
   --decorator-horizontal-margin: 2em;
 
@@ -29,7 +29,7 @@
   --main-blocks-title-icon-offset-left: -1.5em;
 }
 
-body{
+body {
   /* width: var(--page-width);
   height: var(--page-height); */
   position: relative;
@@ -51,26 +51,29 @@ body{
   font-size: 100;
 } */
 
-h1, h2, h3{
+h1,
+h2,
+h3 {
   margin: 0;
   color: #25274d;
 }
 
-h3{
+h3 {
   font-size: 12pt;
 }
 
-li{
+li {
   list-style-type: none;
 }
 
-a, a:visited {
+a,
+a:visited {
   color: inherit;
 }
 
 a:link {
   text-decoration: none;
-  border-bottom: dotted 1px;
+  /* border-bottom: dotted 1px; */
 }
 
 .email:link {
@@ -79,7 +82,7 @@ a:link {
 
 /* sidebar */
 
-#sidebar{
+#sidebar {
   flex: 1;
   float: left;
   position: relative;
@@ -88,21 +91,21 @@ a:link {
   padding: 1.5em;
   /* padding: 0.4in var(--sidebar-horizontal-padding); */
   /* background-image: linear-gradient(to top, rgb(37, 39, 77, 1), rgba(37, 39, 77, 1)); */
-  background-color: #25274df5;
+  background-color: #1f2833;
   font-size: 10.5pt;
   color: #aaabb8;
 }
 
-#sidebar h1{
+#sidebar h1 {
   font-weight: 500;
   font-size: 30pt;
   /* margin-top: 10em; */
   margin-bottom: 0;
 }
 
-a:hover {
-  color: #05bc7c;
-  border-bottom: none;
+#sidebar a:hover {
+  color: #5F8BA7;
+  border-bottom: solid 1px;
 
 }
 
@@ -111,7 +114,7 @@ a:hover {
 }
 
 #sidebar h3 {
-  color: #05bc7c;
+  color: #5F8BA7;
 }
 
 #sidebar h3 a:hover {
@@ -120,59 +123,59 @@ a:hover {
 
 /** big title **/
 
-#title{
+#title {
   position: relative;
   left: 0;
   line-height: 1.2;
 }
 
-#title h1{
+#title h1 {
   font-weight: 500;
   color: #ffffff;
 }
 
-.subtitle{
+.subtitle {
   font-size: 10pt;
 }
 
-.side-block .fa{
+.side-block .fa {
   padding-right: 1.5em;
-  color: #29648a;
+  color: #5F8BA7;
 }
 
 #contact h2 {
   font-weight: 400;
   font-size: 14pt;
-  color: #05bc7c;
+  color: #5F8BA7;
   padding-top: 1em;
   padding-bottom: 1em;
 }
 
-#contact ul{
+#contact ul {
   padding-left: 0;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: 2;
 }
 
-#contact li > i{
+#contact li>i {
   width: 2em;
   text-align: right;
 }
 
-#education ul{
+#education ul {
   margin: 0.2em 0 1.5em;
   padding: 0;
   /* color: #25274d; */
 }
 
-#skills{
+#tools {
   line-height: 1.5;
 }
 
 /*** categorial blocks ***/
 
-#main{
+#main {
   flex: 2;
   /* float: right; */
   /* width: var(--main-width); */
@@ -184,15 +187,17 @@ a:hover {
   font-size: 10pt;
 }
 
-.main-block{
+.main-block {
   margin-top: 3%;
 }
 
-/* #main a:hover {
-  color: #2e9cca;
-} */
+#main a:hover {
+  /* color: #5F8BA7; */
+  border-bottom: solid 1px;
 
-#main h2{
+}
+
+#main h2 {
   position: relative;
   top: var(--row-blocks-padding-top);
   /* XXX: 0.5px for aligning fx printing */
@@ -202,13 +207,14 @@ a:hover {
   color: #25274d;
 }
 
-#main h2 > i{
+#main h2>i {
   /* use absolute position to prevent icon's width from misaligning title */
   /* assigning a fixed width here is no better due to needing to align decorator
      line too */
   position: absolute;
   left: var(--main-blocks-title-icon-offset-left);
-  z-index: 1; /* over decorator line */
+  z-index: 1;
+  /* over decorator line */
   color: #25274d;
 }
 
@@ -218,36 +224,36 @@ a:hover {
 }
 
 /**** minor tweaks on the icon fonts ****/
-#main h2 > .fa-graduation-cap{
+#main h2>.fa-graduation-cap {
   /* left: calc(var(--main-blocks-title-icon-offset-left) - 2pt); */
   top: 1.5em;
 }
 
-#main h2 > .fa{
+#main h2>.fa {
   top: 0.1em;
 }
 
-#main ul{
+#main ul {
   padding-left: 1em;
   margin: 0.5em 0;
 }
 
-#main li{
+#main li {
   margin: 0 0 0.25em 0;
 }
 
 /**** individual row blocks (date - decorator - details) ****/
 
-.blocks{
+.blocks {
   display: flex;
   flex-flow: row nowrap;
 }
 
-.blocks > div{
+.blocks>div {
   padding-top: var(--row-blocks-padding-top);
 }
 
-.date{
+.date {
   flex: 0 0 var(--date-block-width);
   padding-top: calc(var(--row-blocks-padding-top)) !important;
   padding-right: var(--decorator-horizontal-margin);
@@ -256,11 +262,11 @@ a:hover {
   line-height: 1;
 }
 
-.date span{
+.date span {
   display: block;
 }
 
-.date span:nth-child(2)::before{
+.date span:nth-child(2)::before {
   position: relative;
   top: 0.15em;
   right: 0.7em;
@@ -269,7 +275,7 @@ a:hover {
   content: '|';
 }
 
-.decorator{
+.decorator {
   flex: 0 0 0;
   position: relative;
   min-height: 100%;
@@ -285,7 +291,7 @@ a:hover {
  *
  */
 
-.decorator::before{
+.decorator::before {
   position: absolute;
   top: var(--decorator-outer-offset-top);
   left: var(--decorator-outer-offset-left);
@@ -297,7 +303,7 @@ a:hover {
   background-color: #fff;
 }
 
-.decorator::after{
+.decorator::after {
   position: absolute;
   top: calc(var(--decorator-outer-offset-top) + var(--decorator-border-width));
   left: calc(var(--decorator-outer-offset-left) + var(--decorator-border-width));
@@ -309,19 +315,21 @@ a:hover {
   background-color: #25274d;
 }
 
-.blocks:last-child .decorator{ /* slightly shortens it */
+.blocks:last-child .decorator {
+  /* slightly shortens it */
   margin-bottom: 5em;
 }
 
 /***** fine-tunes on the details block where the real juice is *****/
 
-#main .details{
+#main .details {
   flex: 1 0 0;
   padding-left: var(--decorator-horizontal-margin);
-  padding-top: calc(var(--row-blocks-padding-top)) !important; /* not sure why but this is needed for better alignment */
+  padding-top: calc(var(--row-blocks-padding-top)) !important;
+  /* not sure why but this is needed for better alignment */
 }
 
-.details header{
+.details header {
   color: #25274d;
 }
 
@@ -329,7 +337,7 @@ a:hover {
   margin: 0.18in 0 0.1in 0; 
 } */
 
-.main-block:not(.concise) .blocks:last-child .details div{
+.main-block:not(.concise) .blocks:last-child .details div {
   margin-bottom: 0;
 }
 
@@ -342,11 +350,11 @@ a:hover {
   float: right;
 } */
 
-.details div{
+.details div {
   clear: both;
 }
 
-.details .location::before{
+.details .location::before {
   display: inline-block;
   position: relative;
   padding-right: 0.5em;
@@ -359,32 +367,28 @@ a:hover {
 }
 
 /****** customize list symbol style ******/
-#main li::before{
+#main li::before {
   position: relative;
   margin-left: -0.5em;
   content: '• ';
 }
 
-#publications li::before{
+#publications li::before {
   content: none;
 }
 
-#references li::before{
-  content: none;
-}
-
-.details .concise ul{
+.details .concise ul {
   margin: 0 !important;
   -webkit-columns: 2;
   -moz-columns: 2;
   columns: 2;
 }
 
-.details .concise li{
+.details .concise li {
   margin: 0 !important;
 }
 
-.details .concise li{
+.details .concise li {
   margin-left: 0 !important;
 }
 
@@ -402,7 +406,7 @@ hr {
   left: 5pt;
 }
 
-#skills ul{
+#tools ul {
   margin: 0.2em 0 1.5em;
   padding: 0;
 }
@@ -413,7 +417,7 @@ hr {
   font-size:7pt;
 } */
 
-#disclaimer{
+#disclaimer {
   /* position: absolute; */
   padding-top: 5em;
   padding-bottom: 0;
@@ -431,13 +435,16 @@ hr {
     page-break-before: always;
     padding-top: 2em;
   }
+
   a:link {
     border-bottom: none;
   }
+
   #main {
     padding: 0 5% 0 2em;
     width: 74%
   }
+
   #sidebar {
     width: 26%;
   }
