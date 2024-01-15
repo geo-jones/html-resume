@@ -32,38 +32,104 @@
 body {
   /* width: var(--page-width);
   height: var(--page-height); */
-  position: relative;
+  /* position: relative; */
   height: 100%;
   margin: 0;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   line-height: 1.3;
-  color: #25274d;
-  hyphens: auto;
-  overflow-x: hidden;
+  color: black;
+  font-size: 11pt;
 }
 
 #page {
-  display: flex;
+  /* display: flex; */
+  padding: 3em;
 }
 
-/* h1{
-  font-size: 100;
-} */
+a:link {
+  border-bottom: none;
+}
 
-h1,
-h2,
+#main {
+  /* flex: 2; */
+  /* float: left;
+  position: relative; */
+  /* width: 60%; */
+  height: 100%;
+  /* padding-right: 1.5em; */
+  /* display: inline-flex; */
+}
+
+#sidebar {
+  /* flex: 1; */
+  float: right;
+  position: relative;
+  width: 33%;
+  padding-left: 1.5em;
+  /* height: 80%; */
+}
+
+a:hover {
+  border-bottom: dotted 1px;
+}
+
+hr {
+  height: 0.5px;
+  border-width: 0;
+  color: blue;
+  background-color: blue;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 40pt;
+  letter-spacing: -2.5pt;
+  color: blue;
+  margin-bottom: 0em;
+  margin-top: 0em;
+}
+
+h2 {
+  color: blue;
+  font-size: 14pt;
+  /* margin-bottom: 0em; */
+  /* padding-bottom: 0.5em; */
+  /* margin: 3em 0 0 0; */
+}
+
 h3 {
-  margin: 0;
-  color: #25274d;
+  font-size: 11pt;
+  font-weight: 500pt;
 }
 
-h3 {
-  font-size: 12pt;
+ul {
+  margin-top: 0.5em;
+  margin-left: 0;
+  padding-left: 0;
 }
 
-li {
+p, li {
+  font-size: 11pt;
+}
+
+#main li {
+  margin-left: 1em;
+}
+
+#sidebar li {
   list-style-type: none;
+}
+
+.section-block {
+  margin-bottom: 2.5em;
+}
+
+#contact {
+  line-height: 1.5em;
+  margin-top: 2em;
 }
 
 a,
@@ -76,376 +142,47 @@ a:link {
   /* border-bottom: dotted 1px; */
 }
 
+#about {
+  margin-top: 0.5em;
+  margin-bottom: 0em;
+  word-break: keep-all;
+}
+
 .email:link {
   word-break: break-all;
 }
 
-/* sidebar */
-
-#sidebar {
-  flex: 1;
-  float: left;
-  position: relative;
-  /* width: var(--sidebar-width); */
-  width: 22%;
-  padding: 1.5em;
-  /* padding: 0.4in var(--sidebar-horizontal-padding); */
-  /* background-image: linear-gradient(to top, rgb(37, 39, 77, 1), rgba(37, 39, 77, 1)); */
-  background-color: #1f2833;
-  font-size: 10.5pt;
-  color: #aaabb8;
+.job-title,
+.degree,
+.skills-category {
+  font-weight: 600;
 }
 
-#sidebar h1 {
-  font-weight: 500;
-  font-size: 30pt;
-  /* margin-top: 10em; */
-  margin-bottom: 0;
-}
-
-#sidebar a:hover {
-  color: #5F8BA7;
-  border-bottom: solid 1px;
-
-}
-
-#sidebar h2 {
-  color: #ffffff;
-}
-
-#sidebar h3 {
-  color: #5F8BA7;
-}
-
-#sidebar h3 a:hover {
-  color: #ffffff;
-}
-
-/** big title **/
-
-#title {
-  position: relative;
-  left: 0;
-  line-height: 1.2;
-}
-
-#title h1 {
-  font-weight: 500;
-  color: #ffffff;
-}
-
-.subtitle {
+.date,
+.academic-honor {
+  color: gray;
   font-size: 10pt;
 }
 
-.side-block .fa {
-  padding-right: 1.5em;
-  color: #5F8BA7;
+.date:before {
+  padding-left: 0.5em;
 }
 
-#contact h2 {
-  font-weight: 400;
-  font-size: 14pt;
-  color: #5F8BA7;
-  padding-top: 1em;
-  padding-bottom: 1em;
+.item {
+  margin-top: 1.2em;
 }
 
-#contact ul {
-  padding-left: 0;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  line-height: 2;
-}
-
-#contact li>i {
-  width: 2em;
-  text-align: right;
-}
-
-#education ul {
-  margin: 0.2em 0 1.5em;
-  padding: 0;
-  /* color: #25274d; */
-}
-
-#tools {
-  line-height: 1.5;
-}
-
-/*** categorial blocks ***/
-
-#main {
-  flex: 2;
-  /* float: right; */
-  /* width: var(--main-width); */
-  position: relative;
-  width: 78%;
-  height: 100%;
-  padding: 0 15% 0 2em;
-  margin-top: 1em;
-  font-size: 10pt;
-}
-
-.main-block {
-  margin-top: 3%;
-}
-
-#main a:hover {
-  /* color: #5F8BA7; */
-  border-bottom: solid 1px;
-
-}
-
-#main h2 {
-  position: relative;
-  top: var(--row-blocks-padding-top);
-  /* XXX: 0.5px for aligning fx printing */
-  /* left: calc((var(--date-block-width) + var(--decorator-horizontal-margin))); */
-  font-weight: 200;
-  font-size: 14pt;
-  color: #25274d;
-}
-
-#main h2>i {
-  /* use absolute position to prevent icon's width from misaligning title */
-  /* assigning a fixed width here is no better due to needing to align decorator
-     line too */
-  position: absolute;
-  left: var(--main-blocks-title-icon-offset-left);
-  z-index: 1;
-  /* over decorator line */
-  color: #25274d;
-}
-
-#main h2 {
-  left: 1.5em;
-  margin-bottom: 1em;
-}
-
-/**** minor tweaks on the icon fonts ****/
-#main h2>.fa-graduation-cap {
-  /* left: calc(var(--main-blocks-title-icon-offset-left) - 2pt); */
-  top: 1.5em;
-}
-
-#main h2>.fa {
-  top: 0.1em;
-}
-
-#main ul {
-  padding-left: 1em;
-  margin: 0.5em 0;
-}
-
-#main li {
-  margin: 0 0 0.25em 0;
-}
-
-/**** individual row blocks (date - decorator - details) ****/
-
-.blocks {
-  display: flex;
-  flex-flow: row nowrap;
-}
-
-.blocks>div {
-  padding-top: var(--row-blocks-padding-top);
-}
-
-.date {
-  flex: 0 0 var(--date-block-width);
-  padding-top: calc(var(--row-blocks-padding-top)) !important;
-  padding-right: var(--decorator-horizontal-margin);
-  font-size: 10pt;
-  text-align: right;
-  line-height: 1;
-}
-
-.date span {
-  display: block;
-}
-
-.date span:nth-child(2)::before {
-  position: relative;
-  top: 0.15em;
-  right: 0.7em;
-  display: block;
-  height: 1.4em;
-  content: '|';
-}
-
-.decorator {
-  flex: 0 0 0;
-  position: relative;
-  min-height: 100%;
-  border-left: var(--decorator-border);
-}
-
-/*
- * XXX: Use two filled circles to achieve the circle-with-white-border effect.
- * The normal technique of only using one pseudo element and
- * border: 1px solid white; style makes firefox erroneously either:
- * 1) overflows the grayshade background (if no background-clip is set), or
- * 2) shows decorator line which should've been masked by the white border
- *
- */
-
-.decorator::before {
-  position: absolute;
-  top: var(--decorator-outer-offset-top);
-  left: var(--decorator-outer-offset-left);
-  content: ' ';
-  display: block;
-  width: var(--decorator-outer-dim);
-  height: var(--decorator-outer-dim);
-  border-radius: calc(var(--decorator-outer-dim) / 2);
-  background-color: #fff;
-}
-
-.decorator::after {
-  position: absolute;
-  top: calc(var(--decorator-outer-offset-top) + var(--decorator-border-width));
-  left: calc(var(--decorator-outer-offset-left) + var(--decorator-border-width));
-  content: ' ';
-  display: block;
-  width: calc(var(--decorator-outer-dim) - (var(--decorator-border-width) * 2));
-  height: calc(var(--decorator-outer-dim) - (var(--decorator-border-width) * 2));
-  border-radius: calc((var(--decorator-outer-dim) - (var(--decorator-border-width) * 2)) / 2);
-  background-color: #25274d;
-}
-
-.blocks:last-child .decorator {
-  /* slightly shortens it */
-  margin-bottom: 5em;
-}
-
-/***** fine-tunes on the details block where the real juice is *****/
-
-#main .details {
-  flex: 1 0 0;
-  padding-left: var(--decorator-horizontal-margin);
-  padding-top: calc(var(--row-blocks-padding-top)) !important;
-  /* not sure why but this is needed for better alignment */
-}
-
-.details header {
-  color: #25274d;
-}
-
-/* .main-block:not(.concise) .details div{
-  margin: 0.18in 0 0.1in 0; 
-} */
-
-.main-block:not(.concise) .blocks:last-child .details div {
-  margin-bottom: 0;
-}
-
-/* .details .place{
-  float: left;
-  font-size: 7.5pt;
-}
-
-.details .location{
-  float: right;
-} */
-
-.details div {
-  clear: both;
-}
-
-.details .location::before {
-  display: inline-block;
-  position: relative;
+.fa {
   padding-right: 0.5em;
-  left: 0;
-  font-family: FontAwesome;
-  font-weight: normal;
-  font-style: normal;
-  text-decoration: inherit;
-  content: "\f041";
 }
 
-/****** customize list symbol style ******/
-#main li::before {
-  position: relative;
-  margin-left: -0.5em;
-  content: '• ';
-}
-
-#publications li::before {
-  content: none;
-}
-
-.details .concise ul {
-  margin: 0 !important;
-  -webkit-columns: 2;
-  -moz-columns: 2;
-  columns: 2;
-}
-
-.details .concise li {
-  margin: 0 !important;
-}
-
-.details .concise li {
-  margin-left: 0 !important;
-}
-
-hr {
-  height: 0.5px;
-  border-width: 0;
-  color: #aaabb8;
-  background-color: #aaabb8;
-  margin-top: 3em;
-  margin-bottom: 3em;
-}
-
-.sublist {
-  position: relative;
-  left: 5pt;
-}
-
-#tools ul {
-  margin: 0.2em 0 1.5em;
-  padding: 0;
-}
-
-/* #publications ul {
-  margin: 0.05in 0 0.15in;
-  padding: 0;
-  font-size:7pt;
-} */
-
-#disclaimer {
-  /* position: absolute; */
-  padding-top: 5em;
-  padding-bottom: 0;
-  bottom: var(--sidebar-horizontal-padding);
-  left: var(--sidebar-horizontal-padding);
-  font-size: 8.5pt;
-  font-style: italic;
-  line-height: 1.1;
-  text-align: left;
-  color: #464866;
+#skills {
+  line-height: 1.5;
 }
 
 @media print {
   .pagebreak {
     page-break-before: always;
-    padding-top: 2em;
-  }
-
-  a:link {
-    border-bottom: none;
-  }
-
-  #main {
-    padding: 0 5% 0 2em;
-    width: 74%
-  }
-
-  #sidebar {
-    width: 26%;
+    padding-top: 4em;
   }
 }
