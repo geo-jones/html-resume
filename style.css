@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Roboto&family=Roboto+Serif:opsz@8..144&display=swap');
+
 @page {
   size: letter portrait;
   margin-left: 0in;
@@ -114,6 +116,8 @@ ul {
 p,
 li {
   font-size: 11pt;
+  /* font-family: 'Bitter', serif; */
+
 }
 
 #main li {
